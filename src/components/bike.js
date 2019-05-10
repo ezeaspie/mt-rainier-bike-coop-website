@@ -11,7 +11,6 @@ const Bike = (props) => {
       .then(res => res.json())
       .then(res =>{
         if(res.length !== 0){
-            console.log(res);
             setBike(res[id]);
         }
         else{

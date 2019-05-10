@@ -209,7 +209,7 @@ body {
   word-wrap: break-word;
   font-kerning: normal;
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern";
+  font-feature-settings: "kern", "liga", "clig", "calt", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern";
 }
 img {
   max-width: 100%;
@@ -663,8 +663,8 @@ pre tt:after {
 }
 
 .carousel-slide img {
-  max-width: 100%;
-  max-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .carousel-slide p {

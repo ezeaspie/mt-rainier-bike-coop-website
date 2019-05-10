@@ -26,7 +26,6 @@ const HomePage = (props) => {
       setTimeout(getCalenderData,50);
     }
 
-    console.log(props);
     return(
         <div>
             <section className="banner">
@@ -95,12 +94,11 @@ const HomePage = (props) => {
                     <div className="bike-image-list">
                     {
                         bikeData.map((bike, i) => (
-                        <Link className="bike-image-link" to={{pathname: `/bikes/${i}`, bikeData: bike}}>
+                        <Link key={bike.name + i} className="bike-image-link" to={{pathname: `/bikes/${i}`, bikeData: bike}}>
                         <h3 className="bike-name">{bike.name}</h3>
                         <img src={bike.image.url} alt={bike.image.alt} />
                         </Link>
                         ))
-                        //bikeData.map((bike, i) => <Bike bikeData={bike} key={i} />)
                     }
                     </div>
                     </section>
