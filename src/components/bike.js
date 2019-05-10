@@ -3,7 +3,7 @@ import React , { useState } from 'react';
 const Bike = (props) => {
     let id = Number(props.match.params.bikeId);
 
-    let requestURL = `http://localhost:8000/getBikeData`;
+    let requestURL = `https://mt-rainier-bike-coop-backend.herokuapp.com/getBikeData`;
     const getBikeData = () => {
       fetch(requestURL, {
         mode:"cors",
