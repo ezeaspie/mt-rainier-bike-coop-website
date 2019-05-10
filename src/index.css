@@ -25,6 +25,7 @@ summary {
 
 main {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 audio,
 canvas,
@@ -209,7 +210,7 @@ body {
   word-wrap: break-word;
   font-kerning: normal;
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern";
+  font-feature-settings: "kern", "liga", "clig", "calt", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern";
 }
 img {
   max-width: 100%;
