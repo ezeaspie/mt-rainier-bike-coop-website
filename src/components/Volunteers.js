@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const volunteerData = [
+const volunteerDataTest = [
     {
         name: 'John',
         role: 'Lead Organizer',
@@ -10,13 +10,31 @@ const volunteerData = [
 ];
 
 const Volunteers = () => {
+
+    let requestURL = `https://mt-rainier-bike-coop-backend.herokuapp.com/getVolunteerData` // In development? Use : http://localhost:8000/`;
+    const getVolunteerData = () => {
+      fetch(requestURL, {
+        mode:"cors",
+      })
+      .then(res => res.json())
+      .then(res =>{
+        setVolunteerData(res);
+        setCalledServer(true);
+      });
+    }
+
+    const [volunteerData, setVolunteerData] = useState(volunteerDataTest);
+    let [calledServer, setCalledServer] = useState(false);
+    if(!calledServer){
+      setTimeout(getVolunteerData,50);
+    }
     return (
       <ul className="volunteers">
       {
           volunteerData.map((volunteer) => {
             return (
             <li className="volunteer">
-                <img alt="volunteer" className="volunteer-image" src={volunteer.image}></img>
+                <img alt={volunteer.image.alt} className="volunteer-image" src={volunteer.image.url}></img>
                 <div className="volunteer-info">
                     <h2 className="volunteer-name">{volunteer.name}</h2>
                     <p className="volunteer-description">{volunteer.description}</p>

@@ -38,7 +38,10 @@ const Bike = (props) => {
             </div>
             <div className="bike-description">
                 <img src={bike.image.url} alt={bike.image.alt} />
-                <p className="description">{bike.description}</p>
+                <p 
+                dangerouslySetInnerHTML={{__html: bike.description}}
+                className="description"
+                />
             </div>
         </div>
     );

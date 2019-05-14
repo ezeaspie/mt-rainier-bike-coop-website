@@ -15,11 +15,35 @@ const HomePage = (props) => {
         if(res[0].length !== 0){
           setCalenderData(res[0]);
         }
+        if(res[2].length !== 0){
+            setServicesData(res[2]);
+        }
         setBikeData(res[1]);
         setCalledServer(true);
       });
     }
+
+    const serviceData = [
+        {
+          name:"Bike Repair",
+          description: "Access bike repair tools, patches, pumps, and get repair assistance for free",
+          image: "url('./images/bikerepair.jpg')",
+        },
+        {
+          name:"Used Bikes and Bike Parts",
+          description: "Used parts and bikes available for monetary or labor donation",
+          image: "url(./images/bikeparts.jpg)",
+        },
+        {
+          name: "Community Outreach",
+          description: "Working to give back to the community via workshops and public events",
+          image:"url(./images/communityoutreach.jpg)",
+        }
+      ]
+
     let [calenderData, setCalenderData] = useState([{link:'#',start:{timeHourStart:"Sorry!", timeMonthDay:"N/A"},name:"No Events Planned"}]);
+    let [servicesData, setServicesData] = useState(serviceData);
+    
     let [calledServer, setCalledServer] = useState(false);
     let [bikeData, setBikeData] = useState([]);
     if(!calledServer){
@@ -106,7 +130,7 @@ const HomePage = (props) => {
                 <section className="services">
                     <h2>Services We Offer</h2>
                     {
-                    props.serviceData.map((service)=> <ServiceItem key={service.name} serviceData={service}/>)
+                    servicesData.map((service)=> <ServiceItem key={service.name} serviceData={service}/>)
                     }
                 </section>
         </div>

@@ -7,7 +7,7 @@ const ServiceItem = (props) => {
                 <h3 className="service-name">{props.serviceData.name}</h3>
                 <p className="service-desc">{props.serviceData.description}</p>
             </div>
-            <div className="service-image" style={{backgroundImage:props.serviceData.image, backgroundSize:"cover"}}></div>
+            <div className="service-image" style={{backgroundImage:`url(${props.serviceData.image.url})`, backgroundSize:"cover"}}></div>
         </div>
     );
 }
