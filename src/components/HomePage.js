@@ -5,7 +5,7 @@ import Carousel from "./carousel";
 import { Link } from 'react-router-dom';
 
 const HomePage = (props) => {
-    let requestURL = `https://mt-rainier-bike-coop-backend.herokuapp.com/` // In development? Use : http://localhost:8000/`;
+    let requestURL = `https://localhost:8000/` // In development? Use : http://localhost:8000/`;
     const getCalenderData = () => {
       fetch(requestURL, {
         mode:"cors",
@@ -72,7 +72,7 @@ const HomePage = (props) => {
                         <div className="hours-section">
                         <div className="open-times">
                             <div className="businessHours">
-                            <span className="days">Thursdays</span><span className="hours">4pm-7pm</span>
+                            <span className="days">Thursdays</span><span className="hours">3pm-6pm</span>
                             </div>
                             <div className="businessHours">
                             <span className="days">Sundays</span><span className="hours">1pm-4pm</span>
