@@ -1081,6 +1081,10 @@ header nav{
   flex-direction: column;
 }
 
+.bike-description p {
+  text-align: center;
+}
+
 .bike-description img {
   align-self: center;
   margin-bottom: 1rem;
