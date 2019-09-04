@@ -30,7 +30,7 @@ const Bikes = () => {
                 <div className="bike-image-list">
                 {
                     bikeData.map((bike, i) => (
-                    <Link key={bike.name + i} className="bike-image-link" to={{pathname: `/bikes/${i}`, bikeData: bike}}>
+                    <Link key={bike.name + i} className="bike-image-link" to={{pathname: `/bikesforsale/${i}`, bikeData: bike}}>
                     <h3 className="bike-name">{bike.name}</h3>
                     <img src={bike.image.url} alt={bike.image.alt} />
                     </Link>

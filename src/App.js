@@ -17,7 +17,7 @@ const IndexPage = (props) => {
         exact={true}
         path="/"
         render={props => <HomePage {...props} />} />
-        <Route path="/bikes/:bikeId" component={Bike} />
+        <Route path="/bikesforsale/:bikeId" component={Bike} />
         <Route path="/volunteers" component={Volunteers} /> 
         <Route path="/bikes" component={Bikes} />
       </main>
