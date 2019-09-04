@@ -16,8 +16,8 @@ const Header = () => (
         <ul className="navigation-links">
           <li><NavLink to="/bikes">Bikes for Sale</NavLink></li>
           <li><NavLink to="/#ue">Upcoming Events</NavLink></li>
-          <li><NavLink to="/#c">Contact</NavLink></li>
-          <li><Link to="/volunteers">Core Volunteers</Link></li>
+          <li><NavLink to="/#c">Contact Us</NavLink></li>
+          <li><Link to="/volunteers">Meet Our Core Volunteers</Link></li>
         </ul>        
       </nav>
   </header>
