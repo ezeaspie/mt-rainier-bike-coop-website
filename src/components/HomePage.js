@@ -5,7 +5,7 @@ import Carousel from "./carousel";
 import { Link } from 'react-router-dom';
 
 const HomePage = (props) => {
-    let requestURL = `https://localhost:8000/` // In development? Use : http://localhost:8000/`;
+    let requestURL = `https://mt-rainier-bike-coop-backend.herokuapp.com/` // In development? Use : http://localhost:8000/`;
     const getCalenderData = () => {
       fetch(requestURL, {
         mode:"cors",
