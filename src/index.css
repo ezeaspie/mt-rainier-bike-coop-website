@@ -633,7 +633,7 @@ pre tt:after {
 
 .mission {
   position: relative;
-  top:-3rem;
+  top:0;
   z-index:2;
   background:rgba(0, 204, 204);
   width:80%;
