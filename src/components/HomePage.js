@@ -2,7 +2,6 @@ import React , { useState } from 'react';
 import ServiceItem from './serviceItem';
 import Carousel from "./carousel";
 
-import { Link } from 'react-router-dom';
 
 const HomePage = (props) => {
     let requestURL = `https://mt-rainier-bike-coop-backend.herokuapp.com/` // In development? Use : http://localhost:8000/`;
@@ -18,7 +17,6 @@ const HomePage = (props) => {
         if(res[2].length !== 0){
             setServicesData(res[2]);
         }
-        setBikeData(res[1]);
         setCalledServer(true);
       });
     }
@@ -45,7 +43,6 @@ const HomePage = (props) => {
     let [servicesData, setServicesData] = useState(serviceData);
     
     let [calledServer, setCalledServer] = useState(false);
-    let [bikeData, setBikeData] = useState([]);
     if(!calledServer){
       setTimeout(getCalenderData,50);
     }
@@ -110,23 +107,6 @@ const HomePage = (props) => {
                     }
                     </ul>
                 </section>
-                {
-                    bikeData.length === 0? null
-                    :
-                    <section className="bikes-for-sale" id="bfs">
-                    <h2>Bikes for Sale</h2>
-                    <div className="bike-image-list">
-                    {
-                        bikeData.map((bike, i) => (
-                        <Link key={bike.name + i} className="bike-image-link" to={{pathname: `/bikes/${i}`, bikeData: bike}}>
-                        <h3 className="bike-name">{bike.name}</h3>
-                        <img src={bike.image.url} alt={bike.image.alt} />
-                        </Link>
-                        ))
-                    }
-                    </div>
-                    </section>
-                }
                 <section className="services">
                     <h2>Services We Offer</h2>
                     {

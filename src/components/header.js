@@ -14,7 +14,7 @@ const Header = () => (
           </Link>
         </div>
         <ul className="navigation-links">
-          <li><NavLink to="/#bfs">Bikes for Sale</NavLink></li>
+          <li><NavLink to="/bikes">Bikes for Sale</NavLink></li>
           <li><NavLink to="/#ue">Upcoming Events</NavLink></li>
           <li><NavLink to="/#c">Contact</NavLink></li>
           <li><Link to="/volunteers">Core Volunteers</Link></li>

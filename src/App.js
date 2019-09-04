@@ -6,6 +6,7 @@ import { BrowserRouter , Route, Switch } from 'react-router-dom';
 import HomePage from './components/HomePage';
 import Contact from './components/contact';
 import Footer from "./components/footer";
+import Bikes from './components/Bikes';
 
 const IndexPage = (props) => {
   return(
@@ -18,6 +19,7 @@ const IndexPage = (props) => {
         render={props => <HomePage {...props} />} />
         <Route path="/bikes/:bikeId" component={Bike} />
         <Route path="/volunteers" component={Volunteers} /> 
+        <Route path="/bikes" component={Bikes} />
       </main>
       <Contact />
       <Footer />
