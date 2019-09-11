@@ -91,6 +91,7 @@ const HomePage = (props) => {
                     <ul className="event-list">
                     {
                         calenderData.map((event)=>{
+                          console.log(event);
                         return(
                             <li className="event" key={event.start.timeDay + event.start.timeHour}>
                             <a href={event.link} target="_blank" rel="noopener noreferrer">
@@ -100,6 +101,7 @@ const HomePage = (props) => {
                                 <h3 className="event-date-hour">{event.start.timeHour}</h3>
                             </div>
                             <h3 className="event-name">{event.name}</h3>
+                            <p className="event-desc">{event.description}</p>
                             </a>
                             </li>
                         )
