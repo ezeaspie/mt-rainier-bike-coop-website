@@ -101,7 +101,7 @@ const HomePage = (props) => {
                                 <h3 className="event-date-hour">{event.start.timeHour}</h3>
                             </div>
                             <h3 className="event-name">{event.name}</h3>
-                            <p className="event-desc">{event.description}</p>
+                            <p className="event-desc" dangerouslySetInnerHTML={{__html:event.description}}/>
                             </a>
                             </li>
                         )
