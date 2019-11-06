@@ -1,6 +1,8 @@
 import React , { useState } from 'react';
 import ServiceItem from './serviceItem';
 import Carousel from "./carousel";
+import { Link } from 'react-router-dom';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 
 const HomePage = (props) => {
@@ -115,6 +117,12 @@ const HomePage = (props) => {
                     servicesData.map((service)=> <ServiceItem key={service.name} serviceData={service}/>)
                     }
                 </section>
+                <ul className="bottom navigation-links">
+                  <li><NavLink to="/bikes">Bikes for Sale</NavLink></li>
+                  <li><NavLink to="/#ue">Upcoming Events</NavLink></li>
+                  <li><NavLink to="/#c">Contact Us</NavLink></li>
+                  <li><Link to="/volunteers">Meet Our Core Volunteers</Link></li>
+                </ul>
         </div>
         
     );
