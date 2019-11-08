@@ -71,7 +71,7 @@ const HomePage = (props) => {
                         <div className="hours-section">
                         <div className="open-times">
                             <div className="businessHours">
-                            <span className="days">Thursdays</span><span className="hours">3pm-6pm</span>
+                            <span className="days">Thursdays</span><span className="hours">4pm-6pm</span>
                             </div>
                             <div className="businessHours">
                             <span className="days">Sundays</span><span className="hours">1pm-4pm</span>
