@@ -26,7 +26,11 @@ const Bikes = () => {
                 bikeData.length === 0? null
                 :
                 <section className="bikes-for-sale" id="bfs">
-                <h2>Bikes for Sale</h2>
+                  {
+                    bikeData.length < 2 ?
+                    <h2>Featured Bike</h2>:
+                    <h2>Featured Bikes</h2>
+                  }
                 <div className="bike-image-list">
                 {
                     bikeData.map((bike, i) => (

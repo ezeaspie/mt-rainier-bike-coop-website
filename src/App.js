@@ -7,6 +7,7 @@ import HomePage from './components/HomePage';
 import Contact from './components/contact';
 import Footer from "./components/footer";
 import Bikes from './components/Bikes';
+import CEvents from './components/CEvents';
 
 const IndexPage = (props) => {
   return(
@@ -20,6 +21,7 @@ const IndexPage = (props) => {
         <Route path="/bikesforsale/:bikeId" component={Bike} />
         <Route path="/volunteers" component={Volunteers} /> 
         <Route path="/bikes" component={Bikes} />
+        <Route path="/communityEvents" component={CEvents} />
       </main>
       <Contact />
       <Footer />

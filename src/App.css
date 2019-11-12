@@ -210,7 +210,7 @@ body {
   word-wrap: break-word;
   font-kerning: normal;
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern";
+  font-feature-settings: "kern", "liga", "clig", "calt", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern";
 }
 img {
   max-width: 100%;
@@ -1172,6 +1172,36 @@ footer a {
 
 .bottom li a:hover{
   color:#fff;
+}
+
+.events-container {
+  margin:0 auto;
+  width:80%;
+  max-width:980px;
+}
+
+.cevents-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.cevent-image-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+.cevent-image-container {
+  width:50%;
+  max-width: 300px;
+}
+
+.cevent-image-caption{
+  font-size:.6em;
+  text-align: center;
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 480px) {
