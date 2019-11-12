@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const CEvents = () => {
 
-  let requestURL = `http://localhost:8000/getEventData` // In development? Use : https://mt-rainier-bike-coop-backend.herokuapp.com/`;
+  let requestURL = `https://mt-rainier-bike-coop-backend.herokuapp.com/` // In development? Use : `;
     const getCalenderData = () => {
       fetch(requestURL, {
         mode:"cors",
