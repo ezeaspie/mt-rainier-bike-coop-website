@@ -9,7 +9,7 @@ const HomePage = (props) => {
     let requestURL = `https://mt-rainier-bike-coop-backend.herokuapp.com/` // In development? Use : http://localhost:8000/`;
     const getCalenderData = () => {
       fetch(requestURL, {
-        mode:"",
+        mode:"cors",
       })
       .then(res => res.json())
       .then(res =>{
