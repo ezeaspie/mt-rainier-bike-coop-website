@@ -1,5 +1,4 @@
-@import "~slick-carousel/slick/slick.css"; 
-@import "~slick-carousel/slick/slick-theme.css";
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -1238,10 +1237,124 @@ color:#fff;
   align-items: center;
 }
 
-.slick-slider{
+
+.cevent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.slick-slider
+{
+  width:100%;
   max-width:900px;
   position: relative;
   margin:0;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+.slick-slider{
+  
+  
 }
 
 .slick-dots{
@@ -1250,8 +1363,40 @@ color:#fff;
   bottom:3%;
 }
 
-.slick-arrow:before{
-  color:#000;
+.slick-arrow{
+  color:rgba(0,0,0,0);
+  position: absolute;
+  width:2rem;
+  height:2rem;
+  border-radius: 50%;
+  border:none;
+  background:#000;
+  transition: ease-in-out .4s all;
+}
+
+.slick-arrow:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.slick-prev{
+  left:-7%;
+  top:50%;
+}
+
+.slick-next{
+  right:-7%;
+  top:50%;
+}
+
+.slick-prev:before{
+  color:#fff;
+  content:"←";
+}
+
+.slick-next:before{
+  content: "→";
+  color:#fff;
 }
 
 @media only screen and (max-width: 480px) {
