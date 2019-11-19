@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import makeCarousel from 'react-reveal/makeCarousel';
 import Slide from 'react-reveal/Slide';
+import Slider from "react-slick";
 
 const CEvents = () => {
 
@@ -22,6 +23,16 @@ const CEvents = () => {
     if(!calledServer){
       setTimeout(getCalenderData,50);
     }
+    const settings = {
+      className: "",
+      dots: true,
+      infinite: true,
+      lazyLoad: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true
+    };
+
     const CarouselUI = ({ position, total, handleClick, children }) => (
       <div className="carousel-container">
         <div className="carousel-children">
@@ -55,24 +66,24 @@ const CEvents = () => {
                     eventData.map((event, i) => (
                       <div className="cevent">
                         <h3 className="cevent-name">{event.name}</h3>
-                        <Carousel className="cevent-image-list">
-                          {
-                            event.images.map((image) => {
-                              return(
-                                <Slide right>
-                                <div className="cevent-image-container">
-                                <img className="cevent-image" src={image.image} alt={image.description}/>
-                                <p className="cevent-image-caption">{image.description}</p>
-                                </div>
-                                </Slide>
-                              )
-                            })
-                          }
-                        </Carousel>
                         <div 
                           dangerouslySetInnerHTML={{__html: event.description}}
                           className="cevent description"
                           />
+                        <Slider {...settings}>
+                          {
+                            event.images.map((image) => {
+                              return(
+                                <div right>
+                                <div className="cevent-image-container">
+                                <img className="cevent-image" src={image.image} alt={image.description}/>
+                                <p className="cevent-image-caption">{image.description}</p>
+                                </div>
+                                </div>
+                              )
+                            })
+                          }
+                        </Slider>
                       </div>
                     ))
                 }
