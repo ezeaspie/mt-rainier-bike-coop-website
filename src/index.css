@@ -1,3 +1,5 @@
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -210,7 +212,7 @@ body {
   word-wrap: break-word;
   font-kerning: normal;
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern";
+  font-feature-settings: "kern", "liga", "clig", "calt", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern", "kern";
 }
 img {
   max-width: 100%;
@@ -1196,6 +1198,14 @@ footer a {
 .cevent-image-container {
   width:100%;
   position: relative;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.cevent-image{
+  margin:0;
 }
 
 .cevent-image-caption{
@@ -1208,9 +1218,7 @@ footer a {
   top:0;
   left:0;
   right:0;
- /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+88,000000+100&0.65+65,0+100 */
-background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 65%, rgba(0,0,0,0.22) 88%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 65%,rgba(0,0,0,0.22) 88%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+ /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+88,000000+100&0.65+65,0+100 */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 65%,rgba(0,0,0,0.22) 88%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 color:#fff;
@@ -1219,6 +1227,21 @@ color:#fff;
 .cevent .carousel-container {
   margin-bottom: 1.5rem;
   max-width: 900px;
+}
+
+.slick-slider{
+  position: relative;
+  margin:0;
+}
+
+.slick-dots{
+  margin:0;
+  position: absolute;
+  bottom:3%;
+}
+
+.slick-arrow:before{
+  color:#000;
 }
 
 @media only screen and (max-width: 480px) {
