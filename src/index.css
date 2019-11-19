@@ -1197,6 +1197,7 @@ footer a {
 
 .cevent-image-container {
   width:100%;
+  max-width:900px;
   position: relative;
   display: flex;
   align-content: center;
@@ -1229,7 +1230,16 @@ color:#fff;
   max-width: 900px;
 }
 
+.cevent{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
 .slick-slider{
+  max-width:900px;
   position: relative;
   margin:0;
 }
